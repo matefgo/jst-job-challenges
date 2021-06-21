@@ -5,8 +5,8 @@ import ReturnButton from '../components/returnButton';
 const DetailsPage: React.FC = () => {
   return (
     <div className="DetailsPage">
-      <DetailsCard />
       <ReturnButton />
+      <DetailsCard />
     </div>
   );
 };

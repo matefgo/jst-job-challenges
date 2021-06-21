@@ -35,7 +35,7 @@ export const AppContextProvider = ({ children }: Props) => {
   }, []);
 
   useEffect(() => {
-    if (hoveredItem.event === 'focus') {
+    if (hoveredItem.event === 'mousedown') {
       const findSelected = currentList.find(item => {
         return item.char_id.toString() === hoveredItem.id ? item : null;
       });
@@ -57,8 +57,6 @@ export const AppContextProvider = ({ children }: Props) => {
       setCurrentImage(selectedItem.img);
     }
   }, [hoveredItem, selectedItem, currentList]);
-
-  // console.log(Math.floor(Math.random() * 62));
 
   const contextValue = {
     searchTerm,

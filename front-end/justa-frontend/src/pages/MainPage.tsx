@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import SideBar from '../components/sideBar';
 import SearchPage from './SearchPage';
 import DetailsPage from './DetailsPage';
 import CurrentImage from '../components/currentImage';
@@ -9,6 +10,7 @@ const MainPage: React.FC = () => {
 
   return (
     <div className="Main">
+      <SideBar />
       {pageStatus === 'search' && <SearchPage />}
       {pageStatus === 'details' && <DetailsPage />}
       {currentImage !== '' && <CurrentImage />}

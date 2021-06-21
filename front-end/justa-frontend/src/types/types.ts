@@ -6,6 +6,10 @@ export interface ResponseData {
   occupation: [];
   img: string;
   status: string;
+  nickname: string;
+  appearance: [];
+  portrayed: string;
+  category: [];
 }
 
 export const DefaultResponseData: ResponseData = {
@@ -15,6 +19,10 @@ export const DefaultResponseData: ResponseData = {
   occupation: [],
   img: '',
   status: '',
+  nickname: '',
+  appearance: [],
+  portrayed: '',
+  category: [],
 };
 
 export interface HoveredItemType {

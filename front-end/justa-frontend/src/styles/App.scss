@@ -1,0 +1,291 @@
+@font-face {
+    font-family: "HeartBreakingBad";
+    src: url('../fonts/HeartBreakingBad.otf');
+}
+
+$base-color: rgb(42, 95, 81);
+$middle-color: rgb(29, 71, 60);
+$darker-color: rgb(13, 36, 30);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    font-size: 67.5%;
+}
+
+body {
+    background: rgb(9, 20, 18);
+    background: radial-gradient(circle, rgb(13, 20, 20) 0%, rgb(9, 20, 20) 35%, rgb(1, 2, 2) 100%);
+}
+
+.Main {
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.SideBar {
+    height: 100vh;
+    width: 12%;
+    min-width: 125px;
+
+    font-family: 'HeartBreakingBad';
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 10rem;
+    font-weight: 400;
+    color: $base-color;
+    
+    background-color: rgb(255, 255, 255);
+
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.425);
+    z-index: 10;
+
+    .sideIcons {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-self: center;   
+        transition: color 2s; 
+    }
+        #Br {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 45%;
+        }
+        #Ba {
+            padding: 0;
+            margin: 0;
+            margin-top: 45%;      
+        }
+            p {
+                padding: 0;
+            }
+    .sideIcons:hover{
+        color: rgb(114, 161, 27);
+    }
+    .credits {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        padding: 10%;
+    }
+}
+
+.SearchPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 58%;
+    min-width: 890px;
+
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.425);
+    z-index: 5;
+
+    background: rgb(9, 20, 18);
+    background: radial-gradient(circle, $base-color 0%, $middle-color 35%, rgb(1, 2, 2) 100%);
+
+    .WelcomeText {
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15% 7% 4% 7%;
+
+        #welcomeLine {
+            display: flex;
+            align-items: center;
+            font-size: 3rem;
+        }
+        .fontIcon {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            font-family: 'HeartBreakingBad';
+            font-size: 8rem;
+        }
+        #detailsLine{
+            font-size: 2rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .SearchBar {  
+        width: 80%;  
+        display: block;
+        align-items: center;
+        justify-content: center;
+
+        input {
+            border: none;
+            height: 6rem;
+            padding: 2rem;
+            font-size: 3rem;
+            font-weight: bold;
+            color:$base-color;
+            width: 100%;
+        }
+    }    
+
+    .SearchList {
+        height: 50%;
+        width: 80%;
+        margin: 3%;
+        overflow-y: scroll;
+
+        .listItem {
+            background-color: rgb(255, 255, 255);
+            margin: 2%;
+
+            button {
+                width: 100%;
+                height: 100%;
+                padding: 2%;
+
+                font-family: Arial;
+                font-size: 2.7rem;
+                font-weight: bold;
+                text-align: left;
+                
+                border: none;
+                color: rgb(42, 95, 81);
+                background-color: rgb(255, 255, 255);
+
+                transition: all 0.35s ease-in-out;
+            }
+
+            button:hover {
+                background-color: rgb(3, 12, 10);
+                color:rgb(114, 161, 27);
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.425);
+            }
+        }
+    }    
+}
+
+.CurrentImage { 
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        height: 100vh; 
+        top: -9999px;
+        left: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        margin: auto;
+    }
+}
+
+.DetailsPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 58%;
+    min-width: 890px;
+
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.425);
+    z-index: 5;
+
+    .detailsCard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%; 
+        
+        .cardName {
+            font-family: "HeartBreakingBad";
+            align-self: right;
+            width: 80%;
+            font-size: 6rem;
+            color: rgb(255, 255, 255);
+        }        
+        .cardInfo {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(255, 255, 255);
+            width: 80%;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.425);
+
+            .cardItem {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2%;
+                color: $middle-color;
+                transition: all 0.35s ease-in-out;
+            }
+                .cardTitle {
+                    display: flex;
+                    align-items: center;
+                }
+                    .icon {
+                        font-family: "HeartBreakingBad";
+                        font-size: 5rem;
+                    }
+                    .title {
+                        font-family: "HeartBreakingBad";
+                        font-size: 5rem;
+                    }
+            
+                .cardText {
+                    text-align: right;
+                    font-family: Arial;
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+            .cardItem:hover {
+                    background-color: rgb(0, 32, 25);
+                    color: rgb(114, 161, 27);
+            }
+        }
+    }
+
+    .returnButton {
+        align-self: flex-start;
+        padding: 0 3%;
+        font-weight: bold;
+
+        button {
+            background-color: rgba(255, 255, 255, 0);
+            color:rgb(255, 255, 255);
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: left;
+            
+            border: none;
+            transition: all 0.35s ease-in-out;
+        }
+
+        button:hover {
+            color: rgb(114, 161, 27);
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

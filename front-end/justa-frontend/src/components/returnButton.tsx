@@ -11,7 +11,7 @@ const ReturnButton: React.FC = () => {
   return (
     <div className="returnButton">
       <button type="button" onClick={handleReturnButton}>
-        Voltar
+        ❰❰
       </button>
     </div>
   );

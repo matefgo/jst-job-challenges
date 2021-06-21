@@ -18,7 +18,7 @@ const ListItem: React.FC<Props> = ({ item }: Props) => {
     setHoveredItem(eventObject);
   };
 
-  const handleFocus = (event: React.FocusEvent<HTMLButtonElement>) => {
+  const handleMouseDown = (event: React.MouseEvent<HTMLButtonElement>) => {
     const eventObject = {
       id: event.currentTarget.id,
       event: event.type,
@@ -28,18 +28,15 @@ const ListItem: React.FC<Props> = ({ item }: Props) => {
     setPageStatus('details');
   };
 
-  const handleKeyDown = () => {
-    return null;
-  };
-
   return (
     <div className="listItem">
       <button
         id={item.char_id.toString()}
         type="button"
-        onKeyDown={handleKeyDown}
         onMouseOver={handleMouseHover}
-        onFocus={handleFocus}
+        onMouseDown={handleMouseDown}
+        onKeyDown={() => null}
+        onFocus={() => null}
       >
         {item.name}
       </button>

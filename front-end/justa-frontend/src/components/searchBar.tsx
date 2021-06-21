@@ -11,16 +11,19 @@ const SearchBar: React.FC = () => {
   const handleInputFocus = (event: React.SyntheticEvent<HTMLInputElement>) => {
     if (event.type === 'focus') {
       setListStatus(true);
+    } else if (event.type === 'blur') {
+      setListStatus(false);
     }
   };
 
   return (
-    <div>
+    <div className="SearchBar">
       <input
         type="text"
-        placeholder="Digite aqui"
+        placeholder="Who are you looking for?"
         onChange={handleInputChange}
         onFocus={handleInputFocus}
+        onBlur={handleInputFocus}
       />
     </div>
   );
