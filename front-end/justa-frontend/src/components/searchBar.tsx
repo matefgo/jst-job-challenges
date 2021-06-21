@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
-interface Props {
-  changeSearchTerm: (arg0: string) => void;
-}
+const SearchBar: React.FC = () => {
+  const { setSearchTerm, setListStatus } = useContext(AppContext);
 
-const SearchBar: React.FC<Props> = ({ changeSearchTerm }: Props) => {
-  const handleInputChange = (evento: React.ChangeEvent<HTMLInputElement>) => {
-    changeSearchTerm(evento.target.value);
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleInputFocus = (event: React.SyntheticEvent<HTMLInputElement>) => {
+    if (event.type === 'focus') {
+      setListStatus(true);
+    }
   };
 
   return (
@@ -15,6 +20,7 @@ const SearchBar: React.FC<Props> = ({ changeSearchTerm }: Props) => {
         type="text"
         placeholder="Digite aqui"
         onChange={handleInputChange}
+        onFocus={handleInputFocus}
       />
     </div>
   );
