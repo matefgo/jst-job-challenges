@@ -1,44 +1,27 @@
-# Justa @ Desafios de Seleção
+# Desafio Front-End = Justa
 
-## Vagas Disponíveis
+## Sobre o projeto
 
-Maiores detalhes em: https://jobs.kenoby.com/justa
+Esse projeto foi desenvolvido de acordo com o Desafio Front-End proposto pela Justa Pagamentos. Foi feito um fork do [repositório disponibilizado pela empresa](https://github.com/justapagamentos/jst-job-challenges) através do link https://github.com/justapagamentos/jst-job-challenges.
 
-## Requisitos Mínimos
+O desafio consistia em desenvolver uma aplicação que utilizasse algum framework de desenvolvimento utilizando o Typescript, com o objetivo de consumir dados de uma API e atender o que fora proposto. A ideia era de que a aplicação resgatasse os dados da API escolhida, podendo realizar uma busca pelos dados que seriam impressos com mais detalhes de acordo com a seleção do usuário.
 
-- Ter, no mínimo, 2+ anos de experiência comprovada (Profissional ou Acadêmica)
-- Noções fortes de lógica, raciocínio rápido e foco
-- Ótima comunicação
-- Entregar mais do que é esperado
-- Trabalho em equipe com confiança
-- Disponibilidade para morar em Recife / PE
-  - Não fazemos trabalhos remotos!
+Para este desafio, escolhi a API "Breaking Bad API" que possui dados sobre o universo da série que vão desde os personagens e seus dados pessoais, a informações dos episódios exibidos, bem como citações dos personagens e últimas palavras dos personagens.
 
-## Quem somos?
+Neste projeto, decidi fazer uma aplicação que consultava e apresentava as informações pessoais de cada personagem a partir da seleção do usuário.
 
-Acreditamos que para tornar o mercado mais justo é preciso começar sendo transparente, não ter letras miúdas e nem asteriscos.
-Quanto mais exigirmos que isso aconteça, maior a nossa chance de termos uma nova realidade no mercado.
-Há muitas maneiras de aceitar cartões e aí que entramos em cena, com **taxas JUSTAS**, **crédito fácil, rápido e sempre com um JUSTO de confiança perto de você**.
-Muito prazer, **somos a JUSTA**!
 
-## Onde estamos?
+## O que foi utilizado?
 
-### Filial - Recife (PE)
+De acordo com os requisitos, utilizei a biblioteca Axios para fazer as requisições dos dados da API. Também utilizei o React Hooks com o Typescript para desenvolver a aplicação. 
+Foi utilizado o SASS como pré-processador CSS, onde foram feitas as estilizações e alguns breakpoints para atender o requisito de responsividade.
 
-Toda a equipe de Tecnologia da Informação (TI) fica em Recife - Pernambuco.
+O ESLint também foi utilizado junto com o Prettier para análise do código, verificando a estruturação do código e validando o que era desenvolvido. 
 
-[Avenida Antônio de Góes, 742, Empresarial Jopin - Pina, Recife / PE](https://goo.gl/maps/aEujw84xMokDW5Vv7)
+Também utilizei o ContextAPI para a passagem de props entre os componentes.
 
-### Filial - Alphaville (SP)
+## Como executar essa aplicação?
 
-Toda a nossa equipe operacional, ajuda, QA, devops, comercial e logística fica em Alphaville - São Paulo.
+Utilizei o Yarn com o Create-React-App com o template de Typescript para começar com o projeto base de React Typescript. Todas as dependências foram instaladas com Yarn.
 
-[Alameda Xingú, 350, Empresarial iTower Iguatemi - Alphaville Industrial, Barueri / SP](https://www.google.com/maps/place/JUSTA+COM+VC/@-23.4977729,-46.8307726,21z/data=!4m5!3m4!1s0x0:0xdb55bd5c09eb9664!8m2!3d-23.5049645!4d-46.849015)
-
-## Como funcionam os desafios?
-
-Você deve enviar um e-mail para it-recife@justa.com.vc avisando que você tem a intenção de concorrer para uma das vagas disponíveis junto com o seu CV ou LinkedIn e uma carta apresentação falando mais sobre você, suas experiências e seus hobbies.
-
-Depois você deve realizar um Fork deste repositório e realizar todo o desenvolvimento na pasta do desafio que irá se candidatar. Vamos analisar todo o seu processo de desenvolvimento desde análise de código, versionamento, documentação e boas práticas!
-
-Sinta-se à vontade para tirar dúvidas com **Gente Justa** sempre que quiser!
+Para executar a aplicação, é necessário executar o comando yarn no terminal dentro do diretório da aplicação para instalação de dependências e, por fim, executar o yarn start para a execução.
