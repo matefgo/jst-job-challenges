@@ -5,7 +5,7 @@ import SearchList from '../components/searchList';
 import { AppContext } from '../context/AppContext';
 
 const SearchPage: React.FC = () => {
-  const { listStatus, selectedItem } = useContext(AppContext);
+  const { listStatus } = useContext(AppContext);
 
   return (
     <div className="SearchPage">

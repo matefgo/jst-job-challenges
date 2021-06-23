@@ -6,7 +6,7 @@ const CurrentImage: React.FC = () => {
 
   return (
     <div className="CurrentImage">
-      <img src={currentImage} alt="teste" />
+      <img src={currentImage} alt="" />
     </div>
   );
 };

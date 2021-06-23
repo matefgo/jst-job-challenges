@@ -6,7 +6,14 @@ const DetailsCard: React.FC = () => {
 
   return (
     <div className="detailsCard">
-      <p className="cardName">{selectedItem.name.toLocaleLowerCase()}</p>
+      <p className="cardName">
+        {selectedItem.name
+          .toLowerCase()
+          .replace('.', '')
+          .replace('&', 'and')
+          .replace('-', ' ')
+          .replace('á', 'a')}
+      </p>
       <div className="cardInfo">
         <div className="cardItem">
           <div className="cardTitle">

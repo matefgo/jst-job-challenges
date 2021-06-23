@@ -35,6 +35,10 @@ export const AppContextProvider = ({ children }: Props) => {
   }, []);
 
   useEffect(() => {
+    setSearchTerm('');
+  }, [pageStatus]);
+
+  useEffect(() => {
     if (hoveredItem.event === 'mousedown') {
       const findSelected = currentList.find(item => {
         return item.char_id.toString() === hoveredItem.id ? item : null;
