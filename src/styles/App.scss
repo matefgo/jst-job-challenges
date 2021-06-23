@@ -74,6 +74,10 @@ body {
         font-size: 6rem;
     }
 
+    @media only screen and (max-height: 560px) {
+        font-size: 3rem;
+    }
+
     .sideIcons {
         height: 100%;
 
@@ -189,6 +193,9 @@ body {
     @media only screen and (max-width: 768px) {
         all: unset;
 
+        display: block;
+        overflow-y: scroll;
+
         height: 60%;
 
         background: radial-gradient(circle, rgb(42, 95, 81) 0%, rgb(29, 71, 60) 35%, rgb(1, 2, 2) 100%);
@@ -297,6 +304,8 @@ body {
         overflow-y: scroll;
 
         @media only screen and (max-width: 768px) {
+            width: 80%;
+
             margin: auto;
             margin-top: 3%;
             margin-bottom: 2%;
