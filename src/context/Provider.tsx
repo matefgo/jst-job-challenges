@@ -31,7 +31,7 @@ export const AppContextProvider = ({ children }: Props) => {
       .then(res => {
         setCurrentList(res.data);
       })
-      .catch(err => console.error(err));
+      .catch(err => throw err);
   }, []);
 
   useEffect(() => {
